@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  color: #212121;
+}
+
+header {
+  background: #B22222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-weight: 600;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #FFD700;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hero {
+  height: 80vh;
+  background: url('https://picsum.photos/1200/600?library') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero .overlay {
+  background: rgba(178, 34, 34, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.btn {
+  background: #D32F2F;
+  color: white;
+  padding: 12px 25px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #EF5350;
+}
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background: #B22222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #B22222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    text-align: left;
+  }
+
+  nav a {
+    margin: 15px;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.card.libro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #212121;
+}
+
+.card.libro img {
+  width: 100%;
+  max-width: 180px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.info-libro {
+  text-align: center;
+}
+
+.info-libro .titulo {
+  font-weight: 600;
+  font-size: 1em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.info-libro .autor {
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.card.libro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  color: #B22222;
+}
